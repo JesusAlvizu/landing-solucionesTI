@@ -1,22 +1,4 @@
----
-import solucionesLogo from '../assets/logo.png';
-import background from '../assets/background.svg';
-import imgUp from '../assets/img-top.jpg';
----
 
-<div id="container">
-  <img id="img-top" src={imgUp.src} alt="" fetchpriority="high" />
-  <nav id="navbar">
-    <div id="logo-container">
-      <img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo" width="48" height="48" />
-    </div>
-    <ul id="menu">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Nosotros</a></li>
-      <li><a href="#">Contacto</a></li>
-      <li><a href="#">Catálogo</a></li>
-    </ul>
-  </nav>
   <main>
     <div class="servicios-container">
       <div class="servicio">
@@ -29,120 +11,52 @@ import imgUp from '../assets/img-top.jpg';
             <li>Reparación de fallas electrónicas</li>
             <li>Recuperación de datos</li>
           </ul>
+          <br><br>
+          <div class="servicios-individuales">
+            <div class="servicio-card">
+              <img src="/src/assets/servicios/laptop.svg" alt="Laptops" class="servicio-icon" />
+              <span class="servicio-nombre">Laptops</span>
+            </div>
+            <div class="servicio-card">
+              <img src="/src/assets/servicios/celular.svg" alt="Celulares" class="servicio-icon" />
+              <span class="servicio-nombre">Celulares</span>
+            </div>
+            <div class="servicio-card">
+              <img src="/src/assets/servicios/consola.png" alt="Consolas" class="servicio-icon" />
+              <span class="servicio-nombre">Consolas</span>
+            </div>
+            <div class="servicio-card">
+              <img src="/src/assets/servicios/desktop.svg" alt="Desktop" class="servicio-icon" />
+              <span class="servicio-nombre">Desktop</span>
+            </div>
+            <div class="servicio-card">
+              <img src="/src/assets/servicios/tablet.svg" alt="Tablets" class="servicio-icon" />
+              <span class="servicio-nombre">Tablets</span>
+            </div>
+          </div>
+          <br><br>
           <h2>Trabajamos con las mejores marcas del mercado:</h2>
+          <br><br>
           <div class="marcas">
-            <img src="/src/assets/hp.jpg" alt="HP" width="48" height="48" />
-            <img src="/src/assets/dell.webp" alt="Dell" width="90" height="48" />
-            <img src="/src/assets/lenovo.png" alt="Lenovo" width="90" height="48" />
-            <img src="/src/assets/asus.jpg" alt="Asus" width="90" height="48" />
-            <img src="/src/assets/acer.png" alt="Acer" width="90" height="48" />
-            <img src="/src/assets/nvidia.webp" alt="Nvidia" width="90" height="48" />
-            <img src="/src/assets/sony.webp" alt="Sony" width="90" height="48" />
-            <img src="/src/assets/samsung.jpg" alt="Samsung" width="90" height="48" />
-            <img src="/src/assets/ghia.png" alt="Apple" width="90" height="48" /> 
+            <img src="/src/assets/marcas/hp.jpg" alt="HP" width="48" height="48" />
+            <img src="/src/assets/marcas/dell.webp" alt="Dell" width="90" height="48" />
+            <img src="/src/assets/marcas/lenovo.png" alt="Lenovo" width="90" height="48" />
+            <img src="/src/assets/marcas/asus.jpg" alt="Asus" width="90" height="48" />
+            <img src="/src/assets/marcas/acer.png" alt="Acer" width="90" height="48" />
+            <img src="/src/assets/marcas/nvidia.webp" alt="Nvidia" width="90" height="48" />
+            <img src="/src/assets/marcas/sony.webp" alt="Sony" width="90" height="48" />
+            <img src="/src/assets/marcas/samsung.jpg" alt="Samsung" width="90" height="48" />
+            <img src="/src/assets/marcas/ghia.png" alt="Apple" width="90" height="48" />
           </div>
       </div>
-	  </div>
-
-    <div class="servicios-individuales">
-      <div class="servicio-card">
-        <img src="/src/assets/laptop-icon.png" alt="Laptops" class="servicio-icon" />
-        <span class="servicio-nombre">Laptops</span>
-      </div>
-      <div class="servicio-card">
-        <img src="/src/assets/celular-icon.png" alt="Celulares" class="servicio-icon" />
-        <span class="servicio-nombre">Celulares</span>
-      </div>
-      <div class="servicio-card">
-        <img src="/src/assets/consola-icon.png" alt="Consolas" class="servicio-icon" />
-        <span class="servicio-nombre">Consolas</span>
-      </div>
-      <div class="servicio-card">
-        <img src="/src/assets/desktop-icon.png" alt="Desktop" class="servicio-icon" />
-        <span class="servicio-nombre">Desktop</span>
-      </div>
-      <div class="servicio-card">
-        <img src="/src/assets/tablet-icon.png" alt="Tablets" class="servicio-icon" />
-        <span class="servicio-nombre">Tablets</span>
-      </div>
-    </div>
-    
+	  </div>    
   </main>
 </div>
 
 <style>
-  body, #container {
-    min-height: 100vh;
-    position: relative;
-    width: 100vw;
-    font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
-  }
-
-  #img-top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 0;
-  }
-
-  #navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: #080808b5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 8px 0;
-    height: 64px;
-    gap: 32px;
-    z-index: 100;
-  }
-
-  #logo-container {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    height: 100%;
-  }
-
-  #logo {
-    height: 95px;
-    width: auto;
-  }
-
-  #menu {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #menu li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.2s;
-    padding: 8px 12px;
-    border-radius: 6px;
-  }
-
-  #menu li a:hover {
-    background: #b0a53c8e;
-    color: #ffffff;
-  }
-
   .servicios-container {
-    position: fixed;
-    z-index: 2;
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,15 +65,15 @@ import imgUp from '../assets/img-top.jpg';
     box-sizing: border-box;
     border-radius: 12px;
     background-color: #000000b8;
-    margin-top: 100px;
-    width: 90%;
-    left: 3%;
+    width: 95%;
+    left: 4%;
   }
 
   .servicios-container .servicio {
     color: #ffffff;
     text-align: center;
     max-width: 900px; 
+    margin-top: 100px;
   }
 
   .servicio ul{
@@ -184,12 +98,14 @@ import imgUp from '../assets/img-top.jpg';
   }
 
   .servicio-card {
+    position: relative;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 16px;
     text-align: center;
     width: 120px;
     transition: transform 0.2s;
+    z-index: 2;
   }
 
   .servicio-card:hover {

@@ -1,3 +1,9 @@
+---
+import solucionesLogo from '../assets/img_page/logo.png';
+import background from '../assets/background.svg';
+import imgUp from '../assets/img_page/img-top.jpg';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,6 +14,20 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<div id="background-wrapper">
+			<img id="img-top" src={imgUp.src} alt="" fetchpriority="high" />
+		</div>
+		<nav id="navbar">
+			<div id="logo-container">
+			<img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo"/>
+			</div>
+			<ul id="menu">
+			<li><a href="/">Inicio</a></li>
+			<li><a href="/nosotros">Nosotros</a></li>
+			<li><a href="#">Contacto</a></li>
+			<li><a href="#">Catálogo</a></li>
+			</ul>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -15,8 +35,93 @@
 <style>
 	html,
 	body {
-		margin: 0;
+		min-height: 100%;
+		width: 99%;
+		font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+	}
+
+	 #img-top {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		z-index: 0;
+	}
+	
+	#background-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+	}
+
+	#background-wrapper::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		pointer-events: none;
+		z-index: 1;
+		background: linear-gradient(
+		to left,
+		rgba(0,0,0,0) 15%,
+		rgb(0, 0, 0) 100%
+		);
+	}
+
+	#navbar {
+		display: flex;
+		background-color: #080808b5;
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
+		padding: 8px 0;
+		height: 64px;
+		gap: 32px;
+		z-index: 100;
+	}
+
+	#logo-container {
+		display: flex;
+		align-items: center;
+		margin: 0 12%;
 		height: 100%;
+	}
+
+	#logo {
+		height: 95px;
+		width: auto;
+	}
+
+	#menu {
+		display: flex;
+		gap: 32px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#menu li a {
+		color: #ffffff;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: 500;
+		transition: color 0.2s;
+		padding: 8px 12px;
+		border-radius: 6px;
+	}
+
+	#menu li a:hover {
+		background: #b0a53c8e;
+		color: #ffffff;
 	}
 </style>
