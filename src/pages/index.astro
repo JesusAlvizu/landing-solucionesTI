@@ -1,11 +1,41 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ServicioCard from '../components/servicio-card.astro';
 ---
 
 <Layout>
-	<Welcome />
+    <Welcome>
+        <h1>Necesitas un servicio de mantenimiento o reparación?</h1>
+        <h3>Ofrecemos una amplia gama de servicios para satisfacer tus necesidades:</h3>
+        <ul>
+            <li>Limpieza interna y externa</li>
+            <li>Formateo e instalación de sistemas operativos</li>
+            <li>Actualización y reemplazo de componentes</li>
+            <li>Reparación de fallas electrónicas</li>
+            <li>Recuperación de datos</li>
+        </ul>
+        <br><br>
+        <div class="servicios-individuales">
+            <ServicioCard icon="/src/assets/servicios/laptop.svg" nombre="Laptops" />
+            <ServicioCard icon="/src/assets/servicios/celular.svg" nombre="Celulares" />
+            <ServicioCard icon="/src/assets/servicios/consola.png" nombre="Consolas" />
+            <ServicioCard icon="/src/assets/servicios/desktop.svg" nombre="Desktop" />
+            <ServicioCard icon="/src/assets/servicios/tablet.svg" nombre="Tablets" />
+        </div>
+        <br><br>
+        <h2>Trabajamos con las mejores marcas del mercado:</h2>
+        <br><br>
+        <div class="marcas">
+            <img src="/src/assets/marcas/hp.jpg" alt="HP" width="48" height="48" />
+            <img src="/src/assets/marcas/dell.webp" alt="Dell" width="90" height="48" />
+            <img src="/src/assets/marcas/lenovo.png" alt="Lenovo" width="90" height="48" />
+            <img src="/src/assets/marcas/asus.jpg" alt="Asus" width="90" height="48" />
+            <img src="/src/assets/marcas/acer.png" alt="Acer" width="90" height="48" />
+            <img src="/src/assets/marcas/nvidia.webp" alt="Nvidia" width="90" height="48" />
+            <img src="/src/assets/marcas/sony.webp" alt="Sony" width="90" height="48" />
+            <img src="/src/assets/marcas/samsung.jpg" alt="Samsung" width="90" height="48" />
+            <img src="/src/assets/marcas/ghia.png" alt="Apple" width="90" height="48" />
+        </div>
+    </Welcome>
 </Layout>

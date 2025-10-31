@@ -1,62 +1,16 @@
-
-  <main>
-    <div class="servicios-container">
-      <div class="servicio">
-        <h1>Necesitas un servicio de mantenimiento o reparación?</h1>
-          <h3>Ofrecemos una amplia gama de servicios para satisfacer tus necesidades:</h3>
-          <ul>
-            <li>Limpieza interna y externa</li>
-            <li>Formateo e instalación de sistemas operativos</li>
-            <li>Actualización y reemplazo de componentes</li>
-            <li>Reparación de fallas electrónicas</li>
-            <li>Recuperación de datos</li>
-          </ul>
-          <br><br>
-          <div class="servicios-individuales">
-            <div class="servicio-card">
-              <img src="/src/assets/servicios/laptop.svg" alt="Laptops" class="servicio-icon" />
-              <span class="servicio-nombre">Laptops</span>
-            </div>
-            <div class="servicio-card">
-              <img src="/src/assets/servicios/celular.svg" alt="Celulares" class="servicio-icon" />
-              <span class="servicio-nombre">Celulares</span>
-            </div>
-            <div class="servicio-card">
-              <img src="/src/assets/servicios/consola.png" alt="Consolas" class="servicio-icon" />
-              <span class="servicio-nombre">Consolas</span>
-            </div>
-            <div class="servicio-card">
-              <img src="/src/assets/servicios/desktop.svg" alt="Desktop" class="servicio-icon" />
-              <span class="servicio-nombre">Desktop</span>
-            </div>
-            <div class="servicio-card">
-              <img src="/src/assets/servicios/tablet.svg" alt="Tablets" class="servicio-icon" />
-              <span class="servicio-nombre">Tablets</span>
-            </div>
-          </div>
-          <br><br>
-          <h2>Trabajamos con las mejores marcas del mercado:</h2>
-          <br><br>
-          <div class="marcas">
-            <img src="/src/assets/marcas/hp.jpg" alt="HP" width="48" height="48" />
-            <img src="/src/assets/marcas/dell.webp" alt="Dell" width="90" height="48" />
-            <img src="/src/assets/marcas/lenovo.png" alt="Lenovo" width="90" height="48" />
-            <img src="/src/assets/marcas/asus.jpg" alt="Asus" width="90" height="48" />
-            <img src="/src/assets/marcas/acer.png" alt="Acer" width="90" height="48" />
-            <img src="/src/assets/marcas/nvidia.webp" alt="Nvidia" width="90" height="48" />
-            <img src="/src/assets/marcas/sony.webp" alt="Sony" width="90" height="48" />
-            <img src="/src/assets/marcas/samsung.jpg" alt="Samsung" width="90" height="48" />
-            <img src="/src/assets/marcas/ghia.png" alt="Apple" width="90" height="48" />
-          </div>
-      </div>
-	  </div>    
-  </main>
-</div>
+<main>
+  <div class="servicios-container">
+    <div class="servicio">
+      <slot />
+    </div>
+  </div>
+</main>
 
 <style>
+
   .servicios-container {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,96 +30,33 @@
     margin-top: 100px;
   }
 
-  .servicio ul{
+  :global(.servicio ul) {
     padding-left: 20px;
     text-align: left;
     max-width: 350px;
     margin: 16px auto;
   }
 
-  .servicio ul li {
+  :global(.servicio ul li) {
     margin-bottom: 8px;
     line-height: 1.5;
   }
 
-  .servicios-individuales {
+  :global(.servicios-individuales) {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 24px;
     margin-top: 32px;
-  }
-
-  .servicio-card {
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-    width: 120px;
-    transition: transform 0.2s;
     z-index: 2;
   }
 
-  .servicio-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .servicio-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 8px;
-  }
-
-  .servicio-nombre {
-    display: block;
-    font-weight: 500;
-    color: #333333;
-  }
-
-  /* Responsive */
   @media (max-width: 900px) {
-    #navbar {
-      flex-direction: column;
-      height: auto;
-      gap: 16px;
-      padding: 12px 0;
-    }
-
-    #logo {
-      height: 40px;
-    }
-
-    #menu {
-      flex-direction: column;
-      gap: 12px;
-    }
-
     .servicios-container {
       flex-direction: column;
       height: auto;
       padding: 16px 8px;
       gap: 24px;
-    }
-
-    .servicios-individuales {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .servicio-card {
-      width: 100px;
-      padding: 12px;
-    }
-
-    .servicio-icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .servicio-nombre {
-      font-size: 14px;
     }
   }
 </style>

@@ -1,0 +1,51 @@
+---
+const { icon, nombre } = Astro.props;
+---
+    <div class="servicio-card">
+        <img src={icon} alt={nombre} class="servicio-icon" />
+        <span class="servicio-nombre">{nombre}</span>
+    </div>
+
+<style>
+  .servicio-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    width: 120px;
+    transition: transform 0.2s;
+    z-index: 2;
+  }
+
+  .servicio-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .servicio-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+  }
+
+  .servicio-nombre {
+    display: block;
+    font-weight: 500;
+    color: #333333;
+    font-size: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .servicio-card {
+      width: 100px;
+      padding: 12px;
+    }
+    .servicio-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .servicio-nombre {
+      font-size: 14px;
+    }
+  }
+</style>
