@@ -1,10 +1,11 @@
 ---
 import solucionesLogo from '../assets/logo.png';
 import background from '../assets/background.svg';
+import imgUp from '../assets/img-top.jpg';
 ---
 
-<div id="background-container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
+<div id="container">
+  <img id="img-top" src={imgUp.src} alt="" fetchpriority="high" />
   <nav id="navbar">
     <div id="logo-container">
       <img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo" width="48" height="48" />
@@ -17,96 +18,100 @@ import background from '../assets/background.svg';
     </ul>
   </nav>
   <main>
-      <div class="servicios-container">
-		<div class="servicio servicio-izquierda">
-			<h2>Servicio 1</h2>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio principal.</p>
-		</div>
-		<div class="servicio-derecha">
-		<div class="servicio servicio-arriba">
-			<h2>Servicio 2</h2>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-		</div>
-		<div class="servicio servicio-abajo">
-			<h2>Servicio 3</h2>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio superior derecho.</p>
-			<p>Descripción del servicio inferior derecho.</p>
-		</div>
-		</div>
-	</div>
+    <div class="servicios-container">
+      <div class="servicio">
+        <h1>Necesitas un servicio de mantenimiento o reparación?</h1>
+          <h3>Ofrecemos una amplia gama de servicios para satisfacer tus necesidades:</h3>
+          <ul>
+            <li>Limpieza interna y externa</li>
+            <li>Formateo e instalación de sistemas operativos</li>
+            <li>Actualización y reemplazo de componentes</li>
+            <li>Reparación de fallas electrónicas</li>
+            <li>Recuperación de datos</li>
+          </ul>
+          <h2>Trabajamos con las mejores marcas del mercado:</h2>
+          <div class="marcas">
+            <img src="/src/assets/hp.jpg" alt="HP" width="48" height="48" />
+            <img src="/src/assets/dell.webp" alt="Dell" width="90" height="48" />
+            <img src="/src/assets/lenovo.png" alt="Lenovo" width="90" height="48" />
+            <img src="/src/assets/asus.jpg" alt="Asus" width="90" height="48" />
+            <img src="/src/assets/acer.png" alt="Acer" width="90" height="48" />
+            <img src="/src/assets/nvidia.webp" alt="Nvidia" width="90" height="48" />
+            <img src="/src/assets/sony.webp" alt="Sony" width="90" height="48" />
+            <img src="/src/assets/samsung.jpg" alt="Samsung" width="90" height="48" />
+            <img src="/src/assets/ghia.png" alt="Apple" width="90" height="48" /> 
+          </div>
+      </div>
+	  </div>
+
+    <div class="servicios-individuales">
+      <div class="servicio-card">
+        <img src="/src/assets/laptop-icon.png" alt="Laptops" class="servicio-icon" />
+        <span class="servicio-nombre">Laptops</span>
+      </div>
+      <div class="servicio-card">
+        <img src="/src/assets/celular-icon.png" alt="Celulares" class="servicio-icon" />
+        <span class="servicio-nombre">Celulares</span>
+      </div>
+      <div class="servicio-card">
+        <img src="/src/assets/consola-icon.png" alt="Consolas" class="servicio-icon" />
+        <span class="servicio-nombre">Consolas</span>
+      </div>
+      <div class="servicio-card">
+        <img src="/src/assets/desktop-icon.png" alt="Desktop" class="servicio-icon" />
+        <span class="servicio-nombre">Desktop</span>
+      </div>
+      <div class="servicio-card">
+        <img src="/src/assets/tablet-icon.png" alt="Tablets" class="servicio-icon" />
+        <span class="servicio-nombre">Tablets</span>
+      </div>
+    </div>
+    
   </main>
 </div>
 
 <style>
-  body, #background-container {
-  min-height: 100vh;
-  position: relative;
-  width: 100vw;
+  body, #container {
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
     font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
   }
 
-  #background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
-	z-index: -1;
+  #img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
   }
 
   #navbar {
     display: flex;
     align-items: center;
-	justify-content: center; 
-    background-color: #bdbdbd13;
+    justify-content: center; 
+    background-color: #080808b5;
     position: fixed;
-	top: 0;
-	left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-	padding: 8px 0;
-	height: 64px;
-	gap: 32px;
-	z-index: 100;
+    padding: 8px 0;
+    height: 64px;
+    gap: 32px;
+    z-index: 100;
   }
 
   #logo-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
-	height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
   }
 
   #logo {
-    height: 90px;
+    height: 95px;
     width: auto;
   }
 
@@ -115,13 +120,13 @@ import background from '../assets/background.svg';
     gap: 32px;
     list-style: none;
     padding: 0;
-	margin: 0;
-	align-items: center;
-	justify-content: center;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   #menu li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -131,87 +136,120 @@ import background from '../assets/background.svg';
   }
 
   #menu li a:hover {
-    background: #c0ad01c0;
-    color: #fff;
+    background: #b0a53c8e;
+    color: #ffffff;
   }
 
   .servicios-container {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	gap: 32px;
-	margin-top: 150px;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #000000b8;
+    margin-top: 100px;
+    width: 90%;
+    left: 3%;
   }
 
-  .servicio-izquierda {
-	background: #222222a9;
-	color: #fff;
-	border-radius: 16px;
-	padding: 32px 24px;
-	width: 450px;
-	box-shadow: 0 2px 16px #0003;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  .servicios-container .servicio {
+    color: #ffffff;
+    text-align: center;
+    max-width: 900px; 
   }
 
-  .servicio-derecha {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
+  .servicio ul{
+    padding-left: 20px;
+    text-align: left;
+    max-width: 350px;
+    margin: 16px auto;
   }
 
-  .servicio-arriba,
-  .servicio-abajo {
-	background: #222222a9;
-	color: #fff;
-	border-radius: 16px;
-	padding: 24px 16px;
-	width: 450px;
-	box-shadow: 0 2px 16px #0003;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  .servicio ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
   }
 
-/* Responsive */
-@media (max-width: 900px) {
-  #navbar {
-    flex-direction: column;
-    height: auto;
-    gap: 16px;
-    padding: 12px 0;
-  }
-
-  #logo {
-    height: 40px;
-  }
-
-  #menu {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .servicios-container {
-    flex-direction: column;
-    height: auto;
+  .servicios-individuales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 24px;
+    margin-top: 32px;
   }
 
-  .servicio-izquierda,
-  .servicio-arriba,
-  .servicio-abajo {
-    width: 90vw;
-    height: auto;
+  .servicio-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    width: 120px;
+    transition: transform 0.2s;
   }
 
-  .servicio-derecha {
-    flex-direction: row;
-    gap: 24px;
-    width: 100%;
-    height: auto;
+  .servicio-card:hover {
+    transform: translateY(-4px);
   }
-}
+
+  .servicio-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+  }
+
+  .servicio-nombre {
+    display: block;
+    font-weight: 500;
+    color: #333333;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    #navbar {
+      flex-direction: column;
+      height: auto;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    #logo {
+      height: 40px;
+    }
+
+    #menu {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .servicios-container {
+      flex-direction: column;
+      height: auto;
+      padding: 16px 8px;
+      gap: 24px;
+    }
+
+    .servicios-individuales {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .servicio-card {
+      width: 100px;
+      padding: 12px;
+    }
+
+    .servicio-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .servicio-nombre {
+      font-size: 14px;
+    }
+  }
 </style>
