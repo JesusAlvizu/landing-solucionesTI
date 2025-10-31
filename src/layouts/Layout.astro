@@ -11,12 +11,9 @@ import imgUp from '../assets/img_page/img-top.jpg';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Soluciones TI</title>
 	</head>
 	<body>
-		<div id="background-wrapper">
-			<img id="img-top" src={imgUp.src} alt="" fetchpriority="high" />
-		</div>
 		<nav id="navbar">
 			<div id="logo-container">
 			<img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo"/>
@@ -38,8 +35,8 @@ import imgUp from '../assets/img_page/img-top.jpg';
 		min-height: 100%;
 		width: 99%;
 		font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+		background: url('/src/assets/img_page/img-top.jpg') center/cover no-repeat fixed;
 	}
-
 	 #img-top {
 		position: absolute;
 		top: 0;
