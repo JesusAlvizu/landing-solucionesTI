@@ -1,0 +1,217 @@
+---
+import solucionesLogo from '../assets/logo.png';
+import background from '../assets/background.svg';
+---
+
+<div id="background-container">
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
+  <nav id="navbar">
+    <div id="logo-container">
+      <img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo" width="48" height="48" />
+    </div>
+    <ul id="menu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Catálogo</a></li>
+    </ul>
+  </nav>
+  <main>
+      <div class="servicios-container">
+		<div class="servicio servicio-izquierda">
+			<h2>Servicio 1</h2>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio principal.</p>
+		</div>
+		<div class="servicio-derecha">
+		<div class="servicio servicio-arriba">
+			<h2>Servicio 2</h2>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+		</div>
+		<div class="servicio servicio-abajo">
+			<h2>Servicio 3</h2>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio superior derecho.</p>
+			<p>Descripción del servicio inferior derecho.</p>
+		</div>
+		</div>
+	</div>
+  </main>
+</div>
+
+<style>
+  body, #background-container {
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+    font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  #background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+	justify-content: center; 
+    background-color: #bdbdbd13;
+    position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+	padding: 8px 0;
+	height: 64px;
+	gap: 32px;
+	z-index: 100;
+  }
+
+  #logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	height: 100%;
+  }
+
+  #logo {
+    height: 90px;
+    width: auto;
+  }
+
+  #menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+  }
+
+  #menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  #menu li a:hover {
+    background: #c0ad01c0;
+    color: #fff;
+  }
+
+  .servicios-container {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 32px;
+	margin-top: 150px;
+  }
+
+  .servicio-izquierda {
+	background: #222222a9;
+	color: #fff;
+	border-radius: 16px;
+	padding: 32px 24px;
+	width: 450px;
+	box-shadow: 0 2px 16px #0003;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .servicio-derecha {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+  }
+
+  .servicio-arriba,
+  .servicio-abajo {
+	background: #222222a9;
+	color: #fff;
+	border-radius: 16px;
+	padding: 24px 16px;
+	width: 450px;
+	box-shadow: 0 2px 16px #0003;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  }
+
+/* Responsive */
+@media (max-width: 900px) {
+  #navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+    padding: 12px 0;
+  }
+
+  #logo {
+    height: 40px;
+  }
+
+  #menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .servicios-container {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+  }
+
+  .servicio-izquierda,
+  .servicio-arriba,
+  .servicio-abajo {
+    width: 90vw;
+    height: auto;
+  }
+
+  .servicio-derecha {
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
