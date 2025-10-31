@@ -1,0 +1,123 @@
+<div class="timeline">
+  <slot />
+</div>
+
+<style>
+  :global(.timeline) {
+    position: relative;
+    margin: 48px auto;
+    padding: 0 0 48px 0;
+    max-width: 900px;
+    overflow: hidden;
+  }
+  :global(.timeline:before) {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 100%;
+    background: #bdbdbd;
+    border-radius: 3px;
+    z-index: 0;
+  }
+  :global(.timeline-item) {
+    width: 50%;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    float: left;
+    clear: both;
+    position: relative;
+  }
+  :global(.timeline-item.right) {
+    float: right;
+    text-align: left;
+  }
+  :global(.timeline-item.left) {
+    float: left;
+    text-align: right;
+  }
+  :global(.timeline-content) {
+    background: #222222cc;
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px 32px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 24px #0004;
+    min-height: 140px;
+    display: inline-block;
+    max-width: 480px; /* Más ancho */
+  }
+  :global(.timeline-date) {
+    font-weight: bold;
+    font-size: 24px;
+    color: #b0a53c;
+    margin-bottom: 12px;
+    display: block;
+  }
+  :global(.timeline-img img) {
+    width: 96px;      /* Más ancho */
+    height: 96px;     /* Más alto */
+    border-radius: 12px;
+    margin-bottom: 18px;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 2px 8px #0002;
+  }
+  :global(.timeline-item:after) {
+    content: "";
+    position: absolute;
+    top: 56px;
+    left: 100%;
+    width: 20px;
+    height: 20px;
+    background: #b0a53c;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 3px #bdbdbd;
+  }
+  :global(.timeline-item.right:after) {
+    left: -32px;
+  }
+  :global(.timeline-item.left:after) {
+    left: calc(100% + 6px);
+  }
+  @media (max-width: 900px) {
+    .timeline {
+      max-width: 98vw;
+      padding: 0;
+    }
+    .timeline:before {
+      left: 24px;
+      transform: none;
+    }
+    :global(.timeline-item),
+    :global(.timeline-item.left),
+    :global(.timeline-item.right) {
+      width: 100%;
+      float: none;
+      left: 0;
+      text-align: left;
+      padding-left: 48px;
+      margin-bottom: 32px;
+    }
+    :global(.timeline-content) {
+      max-width: 95vw;
+      padding: 24px 12px;
+    }
+    :global(.timeline-img img) {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 12px;
+    }
+    :global(.timeline-item:after),
+    :global(.timeline-item.right:after),
+    :global(.timeline-item.left:after) {
+      left: 0;
+      top: 48px;
+    }
+  }
+</style>
