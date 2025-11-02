@@ -1,0 +1,100 @@
+<form action="https://formspree.io/f/mpwobear" method="POST">
+    <label for="name">Nombre:</label><br />
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Mensaje:</label><br />
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <input type="submit" value="Enviar" />
+</form>
+
+<style>
+    :global(.contacto-flex) {
+        display: flex;
+        gap: 92px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    :global(.contacto-info) {
+        max-width: 400px;
+        flex: 1;
+    }
+
+    :global(.contacto-formulario) {
+        min-width: 320px;
+        flex: 1;
+    }
+
+    form {
+        background: #fff;
+        padding: 28px 22px;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px #0002;
+        max-width: 400px;
+        margin: 32px 3px 3px 3px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    form label {
+        margin: 8px 0 -12px 5px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 90%;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #f7f7f7;
+        color: #222;
+        transition: border-color 0.2s;
+    }
+
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+        border-color: #2a5db0;
+        outline: none;
+    }
+
+    form textarea {
+        resize: vertical;
+        min-height: 80px;
+        font-family: inherit;
+    }
+
+    form input[type="submit"] {
+        background: #2a5db0;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 0;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+
+    form input[type="submit"]:hover {
+        background: #174080;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        form {
+            max-width: 98vw;
+            padding: 16px 6px;
+        }
+    }
+</style>
