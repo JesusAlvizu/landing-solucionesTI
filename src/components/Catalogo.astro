@@ -1,0 +1,15 @@
+---
+const { img }   = Astro.props;
+---
+<div class="catalogo-container">
+    <img src={img} alt="Catálogo" class="catalogo-img" />
+</div>
+
+<style>
+    .catalogo-img {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: 40px auto;
+    }
+</style>
