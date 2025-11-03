@@ -4,188 +4,218 @@ import solucionesLogo from "../../public/img_page/logo.png";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Soluciones TI</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Soluciones TI</title>
 
-		<!-- etiquetas Open graph-->
-		<meta property="og:title" content="Soluciones TI" />
-		<meta
-			property="og:description"
-			content="Mantenimiento, venta y reparación de equipos de computo, consolas, celulares y más"
-		/>
-		<meta property="og:image" content="/img_page/logo.png" />
-		<meta
-			property="og:url"
-			content="https://landing-solucionesti.netlify.app/"
-		/>
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Soluciones TI" />
-		<meta property="og:locale" content="es_MX" />
-	</head>
-	<body>
-		<nav id="navbar">
-			<div id="logo-container">
-				<img
-					src={solucionesLogo.src}
-					alt="Logo SolucionesTI"
-					id="logo"
-				/>
-			</div>
-			<input type="checkbox" id="menu-toggle" class="menu-toggle" />
-			<label for="menu-toggle" class="hamburger" aria-label="Abrir menú">
-				<span></span>
-				<span></span>
-				<span></span>
-			</label>
-			<ul id="menu">
-				<li><a href="/">Inicio</a></li>
-				<li><a href="/nosotros">Nosotros</a></li>
-				<li><a href="/contacto">Contacto</a></li>
-				<li><a href="/catalogo">Catálogo</a></li>
-			</ul>
-		</nav>
-		<slot />
-	</body>
+    <!-- etiquetas Open graph-->
+    <meta property="og:title" content="Soluciones TI" />
+    <meta
+      property="og:description"
+      content="Mantenimiento, venta y reparación de equipos de computo, consolas, celulares y más"
+    />
+    <meta property="og:image" content="/img_page/logo.png" />
+    <meta
+      property="og:url"
+      content="https://landing-solucionesti.netlify.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Soluciones TI" />
+    <meta property="og:locale" content="es_MX" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo-container">
+        <img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo" />
+      </div>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <ul id="menu">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+      </ul>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer id="footer">
+      <p>&copy; 2025 Soluciones TI. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		min-height: 100%;
-		width: 99%;
-		font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
-		background: url("/img_page/img-top.jpg") center/cover no-repeat fixed;
-	}
-	#img-top {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		object-fit: cover;
-		z-index: 0;
-	}
+  html,
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    width: 99%;
+    font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: url("/img_page/img-top.jpg") center/cover no-repeat fixed;
+  }
+  #img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+  }
 
-	#background-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		z-index: 0;
-	}
+  #background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+  }
 
-	#background-wrapper::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		pointer-events: none;
-		z-index: 1;
-		background: linear-gradient(
-			to left,
-			rgba(0, 0, 0, 0) 15%,
-			rgb(0, 0, 0) 100%
-		);
-	}
+  #background-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0) 15%,
+      rgb(0, 0, 0) 100%
+    );
+  }
 
-	#navbar {
-		display: flex;
-		background-color: #080808b5;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		padding: 8px 0;
-		height: 64px;
-		gap: 32px;
-		z-index: 100;
-	}
+  #navbar {
+    display: flex;
+    background-color: #080808b5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px 0;
+    height: 64px;
+    gap: 32px;
+    z-index: 100;
+  }
 
-	#logo-container {
-		display: flex;
-		align-items: center;
-		margin: 0 12%;
-		height: 100%;
-	}
+  main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
-	#logo {
-		height: 95px;
-		width: auto;
-	}
+  #logo-container {
+    display: flex;
+    align-items: center;
+    margin: 0 12%;
+    height: 100%;
+  }
 
-	#menu {
-		display: flex;
-		gap: 32px;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		align-items: center;
-		justify-content: center;
-	}
+  #logo {
+    height: 95px;
+    width: auto;
+  }
 
-	#menu li a {
-		color: #ffffff;
-		text-decoration: none;
-		font-size: 18px;
-		font-weight: 500;
-		transition: color 0.2s;
-		padding: 8px 12px;
-		border-radius: 6px;
-	}
+  #menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
 
-	#menu li a:hover {
-		background: #b0a53c8e;
-		color: #ffffff;
-	}
+  #menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
 
-	.menu-toggle {
-		display: none;
-	}
+  #menu li a:hover {
+    background: #b0a53c8e;
+    color: #ffffff;
+  }
 
-	.hamburger {
-		display: none;
-		flex-direction: column;
-		gap: 5px;
-		cursor: pointer;
-		margin-right: 24px;
-		z-index: 102;
-	}
+  .menu-toggle {
+    display: none;
+  }
 
-	.hamburger span {
-		display: block;
-		width: 28px;
-		height: 4px;
-		background: #b0a53c;
-		border-radius: 2px;
-	}
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 24px;
+    z-index: 102;
+  }
 
-	@media (max-width: 900px) {
-		#menu {
-			display: none;
-			position: absolute;
-			top: 64px;
-			right: 0;
-			background: #080808e0;
-			flex-direction: column;
-			gap: 18px;
-			padding: 18px 24px;
-			box-shadow: 0 4px 24px #0002;
-			border-radius: 12px;
-			z-index: 101;
-		}
-		.menu-toggle:checked ~ #menu {
-			display: flex;
-		}
-		.hamburger {
-			display: flex;
-			margin-top: 18px;
-		}
-	}
+  .hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background: #b0a53c;
+    border-radius: 2px;
+  }
+
+  #footer {
+    background: #080808b5;
+    color: #fff;
+    text-align: center;
+    padding: 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-top: 2px solid #b0a53c;
+    box-shadow: 0 -2px 24px #0002;
+    width: 99%;
+    margin-top: 22px;
+    flex-shrink: 0;
+  }
+
+  
+  @media (max-width: 600px) {
+    #footer {
+        font-size: 0.95rem;
+        padding: 18px 0 8px 0;
+    }
+
+  @media (max-width: 900px) {
+    #menu {
+      display: none;
+      position: absolute;
+      top: 64px;
+      right: 0;
+      background: #080808e0;
+      flex-direction: column;
+      gap: 18px;
+      padding: 18px 24px;
+      box-shadow: 0 4px 24px #0002;
+      border-radius: 12px;
+      z-index: 101;
+    }
+    .menu-toggle:checked ~ #menu {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+      margin-top: 18px;
+    }
+  }
 </style>
