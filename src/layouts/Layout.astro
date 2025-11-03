@@ -1,5 +1,5 @@
 ---
-import solucionesLogo from '../../public/img_page/logo.png';
+import solucionesLogo from "../../public/img_page/logo.png";
 ---
 
 <!doctype html>
@@ -13,24 +13,39 @@ import solucionesLogo from '../../public/img_page/logo.png';
 
 		<!-- etiquetas Open graph-->
 		<meta property="og:title" content="Soluciones TI" />
-		<meta property="og:description" content="Mantenimiento, venta y reparación de equipos de computo, consolas, celulares y más" />
+		<meta
+			property="og:description"
+			content="Mantenimiento, venta y reparación de equipos de computo, consolas, celulares y más"
+		/>
 		<meta property="og:image" content="/img_page/logo.png" />
-		<meta property="og:url" content="https://landing-solucionesti.netlify.app/" />
+		<meta
+			property="og:url"
+			content="https://landing-solucionesti.netlify.app/"
+		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:site_name" content="Soluciones TI" />
 		<meta property="og:locale" content="es_MX" />
-		
 	</head>
 	<body>
 		<nav id="navbar">
 			<div id="logo-container">
-			<img src={solucionesLogo.src} alt="Logo SolucionesTI" id="logo"/>
+				<img
+					src={solucionesLogo.src}
+					alt="Logo SolucionesTI"
+					id="logo"
+				/>
 			</div>
+			<input type="checkbox" id="menu-toggle" class="menu-toggle" />
+			<label for="menu-toggle" class="hamburger" aria-label="Abrir menú">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
 			<ul id="menu">
-			<li><a href="/">Inicio</a></li>
-			<li><a href="/nosotros">Nosotros</a></li>
-			<li><a href="/contacto">Contacto</a></li>
-			<li><a href="/catalogo">Catálogo</a></li>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/nosotros">Nosotros</a></li>
+				<li><a href="/contacto">Contacto</a></li>
+				<li><a href="/catalogo">Catálogo</a></li>
 			</ul>
 		</nav>
 		<slot />
@@ -42,10 +57,10 @@ import solucionesLogo from '../../public/img_page/logo.png';
 	body {
 		min-height: 100%;
 		width: 99%;
-		font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
-		background: url('/img_page/img-top.jpg') center/cover no-repeat fixed;
+		font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+		background: url("/img_page/img-top.jpg") center/cover no-repeat fixed;
 	}
-	 #img-top {
+	#img-top {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -54,7 +69,7 @@ import solucionesLogo from '../../public/img_page/logo.png';
 		object-fit: cover;
 		z-index: 0;
 	}
-	
+
 	#background-wrapper {
 		position: absolute;
 		top: 0;
@@ -74,9 +89,9 @@ import solucionesLogo from '../../public/img_page/logo.png';
 		pointer-events: none;
 		z-index: 1;
 		background: linear-gradient(
-		to left,
-		rgba(0,0,0,0) 15%,
-		rgb(0, 0, 0) 100%
+			to left,
+			rgba(0, 0, 0, 0) 15%,
+			rgb(0, 0, 0) 100%
 		);
 	}
 
@@ -128,5 +143,49 @@ import solucionesLogo from '../../public/img_page/logo.png';
 	#menu li a:hover {
 		background: #b0a53c8e;
 		color: #ffffff;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		gap: 5px;
+		cursor: pointer;
+		margin-right: 24px;
+		z-index: 102;
+	}
+
+	.hamburger span {
+		display: block;
+		width: 28px;
+		height: 4px;
+		background: #b0a53c;
+		border-radius: 2px;
+	}
+
+	@media (max-width: 900px) {
+		#menu {
+			display: none;
+			position: absolute;
+			top: 64px;
+			right: 0;
+			background: #080808e0;
+			flex-direction: column;
+			gap: 18px;
+			padding: 18px 24px;
+			box-shadow: 0 4px 24px #0002;
+			border-radius: 12px;
+			z-index: 101;
+		}
+		.menu-toggle:checked ~ #menu {
+			display: flex;
+		}
+		.hamburger {
+			display: flex;
+			margin-top: 18px;
+		}
 	}
 </style>
